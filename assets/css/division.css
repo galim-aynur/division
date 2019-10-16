@@ -5,3 +5,26 @@ body {
 .addressed-message {
   background-color: #ffff80;
 }
+
+.message-container {
+  display: grid;
+  grid-template-columns: 1fr 11fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "image text";
+
+  margin-bottom: 10px;
+}
+
+.avatar-container {
+  grid-area: image;
+  align-items:
+}
+
+.avatar {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.text-container {
+  grid-area: text;
+}

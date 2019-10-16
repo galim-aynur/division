@@ -7,4 +7,8 @@ defmodule DivisionWeb.ChatView do
       true -> ""
     end
   end
+
+  def avatar(user) do
+    Division.Avatar.url({user.avatar, user}, :thumb, signed: true) |> img_tag(class: "avatar")
+  end
 end
