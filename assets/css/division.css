@@ -20,8 +20,16 @@ body {
 }
 
 .avatar {
-  width: 50px;
+  max-width: 50px;
+  min-height: 50px;
   border-radius: 50%;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 500;
+  font-size: 1.5em;
 }
 
 .text-container {

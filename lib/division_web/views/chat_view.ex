@@ -9,6 +9,12 @@ defmodule DivisionWeb.ChatView do
   end
 
   def avatar(user) do
-    Division.Avatar.url({user.avatar, user}, :thumb, signed: true) |> img_tag(class: "avatar")
+    if user.avatar do
+      Division.Avatar.url({user.avatar, user}, :thumb, signed: true)
+      |> img_tag(class: "avatar")
+    else
+      username = user.username |> String.first() |> String.upcase()
+      content_tag(:div, username, class: "avatar")
+    end
   end
 end
